@@ -35,31 +35,39 @@ document.getElementById('izvedi').addEventListener('click', () => {
     rezultat.innerHTML = parseInt((x-cijeliBroj)*100);
 
 
-    break;
 
 
  //Završen zadatak  4
 break;
-  // Početak 5 zadatak
+  // Početak 8 zadatak
 
-   case '5':
-  const y = Number(a);
-  if(!y){
-      rezultat.innerHTML= 'Niste unijeli broj'
+   case '8':
+
+  const  dobroja  = Number(a);
+  if(!a){
+      rezultat.innerHTML= 'Unesite broj'
       return;
 };
-if(y%2 === 0){
-rezultat.innerHTML= 'paran'
-}else{
-  rezultat.innerHTML= 'neparan'
-};
+
+let s='';
+for (let i=1;i<dobroja; i++){
+  console.log(i +',');
+  if(i===dobroja){
+   s+= i+','; 
+  }else{
+    s += i+',';
+  }
+
+  }
+rezultat.innerHTML = s;
+
 
 //Završen 5 zadatak
 break;
 
 case '6':
 
-switch (a.tolowerCase() {
+switch (a.tolowerCase()) {
    case 'jabuka':
    case 'kruška':
    case 'banana':
@@ -86,7 +94,7 @@ break;
   };
 
  
-
+});
 
 
 
