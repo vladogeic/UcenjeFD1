@@ -40,7 +40,6 @@ document.getElementById('izvedi').addEventListener('click', () => {
  //Završen zadatak  4
 break;
   // Početak 8 zadatak
-
    case '8':
 
   const  dobroja  = Number(a);
