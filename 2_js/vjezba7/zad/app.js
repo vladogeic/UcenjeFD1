@@ -7,127 +7,53 @@ document.getElementById('izvedi').addEventListener('click', () => {
   const zadatak = document.getElementById('zadatak').value;
 
   switch (zadatak) {
-    case '1':
-      // rješavanje 1. zadatak
-     // Za uneseni broj cijeli broj u pole A veći od 2 i manji od 10M ispiše da li je prim(prosti) ili ne
-const a1 = Number(a)
-if (!a){
-  rezultat.innerHTML ='Uneseni podatak nije broj'
-  return;
-}
-console.log(a1);
+    
+          // kraj rješavanje 1. zadatak
+      
 
-if(a1<2|| a1>10000000){
-  rezultat.innerHTML = 'Uneseni broj mora biti između dva i deset milijuna'
-return;
-}
-console.log(a1);
-let prim = true
-let cjelobrojnoDjeljiv =0
-for(let i =2; i< a1; i++){
-  if(brojac++,'%' === 0){//svaki tisućiti ispiši
-console.log(a1,'%', i,'=', a1 % i);
-  }
+
+
+           // rješavanje 2. zadatak
  
- if(a1%i===0){
-  prim = false
-  break;
- // console.log('Nije prim broj' a1);
- }
-}
-if(a1 % i===0){
-  cjelobrojnoDjeljiv=i;
-  prim =false;
-  break; 
-}
-}
-if (prim){
-  rezultat.innerHTML=`$ {a1} je PRIM broj`
-}else{
-  rezultat.innerHTML =`8 ${brojač} $ {a1} nije PRIM broj jer je cjelobrojno djelviv s $ {cjelobroj}`    // 5 je prim
-}
-  // 6 % 2 =0
-    // 6 % 3 =0
-    // 6 % 4 =2
-    // 6 % 7 =0 
+           // rješavanje 3. zadatak
 
-
-
-
-
-
-      // kraj rješavanje 1. zadatak
-    break;
-
-
-
-
-    case '2':
-      // rješavanje 2. zadatak
- 6 je savršen broj ZAŠTO
-
- 6 % 1= 0 uzimam 1
- 6 % 2 = 0, uzimam 2
- 6 % 3 = 0  uzimam 3
- 6 % 4 = 2  Ne uzimam 4
- 6 % 5 =1, Ne uzimam 5
- //Zbrojim sve one koje uzimam (1+2+3) =6
- //ako je ulaz 8&9 jednako zbroj (6) radi se o savršenom broju
- 
- //7 nije savršen broj
-// (7%1)  =
-// (7%2)  =1
-// (7%3)  =1
-// (7%4 ) =3
-// (7%5)  =2
-//      6  =6
-      // 1 ,   1! =7   7 nije savršen broj  
- //1 +( 7%2)=1 +3+2+6 =14, 14! =7
-const b1 = Number(b)
-
-if (!b){
-  rezultat.innerHTML ='Uneseni podatak nije broj'
-  return;
-}
-
-
-if(b1<2 || a1>1000){
-  rezultat.innerHTML = 'Uneseni broj mora biti između dva i tisuću'
-return;
-}
-let suma= 0;
-for(let i=1;i<b1;i++){
-if(b1%i===0){
-suma += i
-}
-}
-if (suma ===b1){
-rezultat.innerHTML = `${b1} je savršen broj`
-} 
-else {
-  rezultat.inner>HTML =`${b1} nije savršen broj`
-  }
-
-
-
-
-
-
-
-
-
-      // kraj //rješavanje 2. zadatak
-    break;
-
-
-
-    case '3':
-      // rješavanje 3. zadatak
-
-      // kraj rješavanje 3. zadatak
-    break;
+           // kraj rješavanje 3. zadatak
+    
     case '4':
       // rješavanje 4. zadatak
+      //za unesenu riječ u polje A provjerit da li je palindrom ili ne
+      //palindron je ružan Edo ode na na žur
+      //ružanedoodenažur
+
+      let s =  '' ;
+      for(let i=0; i<a.length; i++){
+        if(a [i]!= ''){
+          s+= a[i].toLowerCase();
+        } 
+      }
+      console.log('s=',s)
+      let p = true;
+      let duljina= s.length
+      for(let i=0; i<duljina/  2; i++) {
+
+        if(s[i] !==s[duljine-1-i]){
+          p=false;
+          break; //čim nađe razliku , nije palindrom
+        }
+      }
+      if(p){
+        rezultat.innerHTML= 'izraz nije palindrom'
+
+      }
+
+
+
+
+
+
+
+
+
 
       // kraj rješavanje 4. zadatak
     break;
