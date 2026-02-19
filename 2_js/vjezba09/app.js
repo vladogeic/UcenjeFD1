@@ -1,0 +1,111 @@
+
+const isDev=true;
+//funcija je skup naredbi s određenom svrhom ,koji ćemo više puta potivati
+
+//osnovne vrste funcija
+
+//poziv funcije koji je u kodu "prije definicije funcije"
+
+//1. ne prima vrijednost, ne vraća vrijednost
+//definiranje funcije
+function pozdraviSvijet(){
+    console.log('Hello world');
+    // return; može i ne mora se napisati
+}
+//poziv funcije
+pozdraviSvijet();
+
+// 2.prima parametre, ne vraća vrijednost
+//definiranje funcije
+function parniBrojevi(odBroja,doBroja){  
+        //parametri se odvajaju zarezom, tu su varijable
+const max = odBroja>doBroja ? odBroja : doBroja
+const min = odBroja<doBroja ? odBroja : doBroja
+
+for (let i=min; i<max; i++){
+    if(i% 2 ===0) {
+        console.log(i);
+    }
+}
+}
+
+//poziv funcije
+log('Prvi poziv');
+parniBrojevi(3,8);
+log('Drugi poziv');
+parniBrojevi(59,65);
+log('Treći poziv');
+parniBrojevi(12,7);
+
+
+function log(poruka){
+    if(!isDev){
+        return;
+    }
+    console.log('----------------');
+    console.log(
+        poruka);
+    console.log('------------------');
+}
+//3.ne prima parametre, vraća vrijednost
+//definiranje funcije
+
+
+function slucajniBroj(){  //ona je tipa number
+            const broj= Math.random();
+            log(broj);
+            const uvecano =broj *1000;
+            const intb = parseInt(uvecano)
+            return intb; //ovo je vraćanje vrijednosti
+    }
+
+
+// i funciju koja vraća vrijednost može pozvati bez da ju dodijelim nekome
+slucajniBroj();
+
+
+//"ispravan način" poziva funcije koja vraća vrijednost
+const sb=slucajniBroj();
+log(sb);
+// slučajni broj načini
+console.log((Math.random()*1000).toFixed(0));// slučajni broj od 100 do 999
+console.log((Math.random()* (58-22)+22).toFixed()); //ovo je slučajni broj od 22 do 58
+//4. način prima parametre ,vraća vrijednost   ---> Najčešće korišten
+// definiranje funcije
+function  zbrojPrimBrojeva (odBroja, doBroja){
+    let suma=0, prim=true
+    for(let i=odBroja; i<= doBroja; i++){
+    prim =true;
+    for(let j=2; j<i; i++){
+    if(i % j===0){
+        prim=false;
+        break;
+    }
+}
+if (prim){
+    suma+= i
+}
+    }
+    return suma;
+}
+//korištenje
+log (zbrojPrimBrojeva(3,80));
+//arrow funcija
+const pozdravArrow = () => console.log('Hello Arrow'); //vjerovali ili ne ovo je funcija
+
+pozdravArrow();
+
+//funcija u objektu
+
+
+
+const brojevi ={
+    slucajniBroj: (a,b) =>{
+        //tu bi došao kod koji imam u funciji slucajniBroj
+   return 7;
+    },
+ 
+   nula: ()=> {return 0}
+}
+
+log(brojevi['slucajniBroj'] ())
