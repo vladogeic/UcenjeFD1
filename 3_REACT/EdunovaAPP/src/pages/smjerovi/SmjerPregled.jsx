@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 import SmjerService from "../../services/smjerovi/SmjerService"
 import { Table } from "react-bootstrap"
 import { GrValidate } from "react-icons/gr"
+import { NumericFormat } from "react-number-format"
+import FormatDatuma from "../../components/FormatDatuma"
 
 export default function SmjerPregled(){
 
@@ -50,7 +52,10 @@ export default function SmjerPregled(){
 
                         />
                       </td>
-                <td> {smjer.datumPokretanja} </td>
+                <td> 
+                    <FormatDatuma datum={smjer.datumPokretanja} />
+                    
+                    </td>
                 <td> 
                     <GrValidate
                     size ={25}
