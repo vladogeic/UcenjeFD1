@@ -6,6 +6,7 @@ import { NumericFormat } from "react-number-format"
 import FormatDatuma from "../../components/FormatDatuma"
 import { Link } from "react-router-dom"
 import { RouteNames } from "../../constants"
+import { Button } from "bootstrap"
 
 export default function SmjerPregled(){
 
@@ -70,7 +71,17 @@ export default function SmjerPregled(){
                     color={smjer.aktivan ? 'green' :  'red' } 
                     />                 
                     </td>
-                    <td></td>
+                    <td>
+ <Button>
+
+
+    
+ </Button>
+
+
+
+
+                    </td>
                     </tr>
         ))}
     </tbody>
